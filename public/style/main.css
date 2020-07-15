@@ -1,0 +1,19 @@
+@font-face{
+    font-family: "EmojiFont";
+    src: url(/style/NotoEmoji-Regular.woff2);
+}
+
+@font-face{
+    font-family: "BaseFont";
+    src: url(NotoSansJP-Regular.woff2);
+}
+
+body{
+    background-color: #fff;
+    font-family: "BaseFont", "EmojiFont";
+}
+
+.emoji{
+    font-family: "EmojiFont";
+    font-weight: normal;
+}

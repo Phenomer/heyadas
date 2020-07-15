@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HEYADAS - 地点一覧</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style/main.css">
+  </head>
+  <body>
+    <h1>HEYADAS - 地点一覧</h1>
+    <ul>
+      <% locals[:points][:data].each do |point| %>
+      <li>
+	<%= point['point_name']%>
+	<a href="/point/<%= point['point_id']%>/temperature">気温🌡️</a>
+	<a href="/point/<%= point['point_id']%>/humidity">湿度💧</a>
+	<a href="/point/<%= point['point_id']%>/pressure">気圧🌀</a>
+      </li>
+      <% end %>
+    </ul>
+  </body>
+</html>

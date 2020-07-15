@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Heyadas - <%= locals[:point][:data]['point_name'] %>の最近1時間の<%= locals[:type] %></title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <h1>Heyadas - <%= locals[:point][:data]['point_name'] %>の最近1時間の<%= locals[:type] %></h1>
+    <ul>
+      <% locals[:data][:data].each do |e| %>
+      <li>
+	<%= e['obs_at'] %> <%= e[locals[:type]] %>
+      </li>
+      <% end %>
+    </ul>
+  </body>
+</html>
