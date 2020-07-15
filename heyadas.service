@@ -1,0 +1,15 @@
+[Unit]
+Description=heyadas
+After=network.target
+
+[Service]
+Type=simple
+User=heyadas
+WorkingDirectory=/opt/heyadas/heyadas
+ExecStart=/usr/bin/bundle exec ./heyadas.rb
+TimeoutSec=15
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
